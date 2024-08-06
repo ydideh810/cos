@@ -70,7 +70,7 @@ export default function Home() {
             <button
   className="p-3 px-6 bg-black text-red-700"
   onClick={() => {
-    window.location.href = 'https://buy.stripe.com/5kA9Cf0FW4Pf8LK144';
+    window.location.href = 'https://square.link/u/RmVSmy9L';
     return false;
   }}
 >
