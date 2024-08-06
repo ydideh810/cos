@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) template project that's preconfigured f
 
 You can use this as a quick jumping-off point to build a web app using Replicate's API, or you can recreate this codebase from scratch by following the guide at [replicate.com/docs/get-started/nextjs](https://replicate.com/docs/get-started/nextjs)
 
-![Screenshot 2023-03-13 at 7 00 18 PM](https://user-images.githubusercontent.com/2289/224872889-2709eb76-38b0-45cb-8dae-3090eb7ec228.png)
+
 
 
 ## Noteworthy files
