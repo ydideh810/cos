@@ -59,7 +59,7 @@ export default function Home() {
             <h4 className="mb-4">Welcome to CosmoSpeak</h4>
 
             <p className="mb-8">
-              Explore the wonders of Space Engineering with CosmoSpeak!
+              Explore the wonders of Space Engineering through A.I.
             </p>
 
             <ol className="list-decimal mx-6 pl-2 mb-8">
