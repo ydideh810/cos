@@ -16,7 +16,7 @@ export default function Home() {
     // Set up an interval to show the dialog every hour
     const intervalId = setInterval(() => {
       setShowDialog(true);
-    }, 10000); // 3600000 milliseconds = 1 hour
+    }, 3600000); // 3600000 milliseconds = 1 hour
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
