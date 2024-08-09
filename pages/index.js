@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -7,6 +7,25 @@ export default function Home() {
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
   const [showDialog, setShowDialog] = useState(true);
+
+    // Show the dialog periodically every hour
+  useEffect(() => {
+    // Show the popup immediately on initial load
+    setShowDialog(true);
+
+    // Set up an interval to show the dialog every hour
+    const intervalId = setInterval(() => {
+      setShowDialog(true);
+    }, 10000); // 3600000 milliseconds = 1 hour
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Handle close button click
+  const handleClose = () => {
+    setShowDialog(false);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,35 +70,34 @@ export default function Home() {
      <link rel="icon" href="https://i.postimg.cc/28X3KLWt/circle.png" type="image/x-icon" />
       </Head>
      
-      {showDialog && (
+     {showDialog && (
         <dialog
+          open
           className="fixed w-screen h-screen bg-black bg-opacity-50 inset-0 flex justify-center items-center z-50"
         >
           <article className="content-container bg-white p-8 overflow-y-scroll max-h-screen">
-            <h4 className="mb-4">Welcome to CosmoSpeak</h4>
-
-            <p className="mb-8">
-              Explore the wonders of Space Engineering through A.I.
-            </p>
-
+            <h4 className="mb-4">Welcome to CosmoSpeak!</h4>
+          
             <ol className="list-decimal mx-6 pl-2 mb-8">
-              <li>Get started w/ a free trial!</li>  
+              <li>Continue with our free trial!</li>  
               
             </ol>
-          
+             <button
+              className="p-3 px-6 bg-black text-red-700"
+              onClick={() => window.location.href = 'https://square.link/u/RmVSmy9L'
+            >
+              Start Today
+            </button>
+                
             <button
-  className="p-3 px-6 bg-black text-red-700"
-  onClick={() => {
-    window.location.href = 'https://square.link/u/RmVSmy9L';
-    return false;
-  }}
->
-  Start Today
-</button>
-
+              className="p-3 px-6 bg-black text-red-700"
+              onClick={handleClose}
+            >
+              Close
+            </button>
           </article>
         </dialog>
-      )} 
+      )}
       
 
       <h1 className="text-3xl text-center p-10 text-red-700" style={{ fontFamily: 'Zen Dots' }}>
