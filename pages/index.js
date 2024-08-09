@@ -84,8 +84,7 @@ export default function Home() {
             </ol>
              <button
               className="p-3 px-6 bg-black text-red-700"
-              onClick={() => window.location.href = 'https://square.link/u/RmVSmy9L'
-            >
+              onClick={() => window.location.href = 'https://square.link/u/RmVSmy9L'>
               Start Today
             </button>
                 
