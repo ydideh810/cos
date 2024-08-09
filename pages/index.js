@@ -76,21 +76,25 @@ export default function Home() {
           className="fixed w-screen h-screen bg-black bg-opacity-50 inset-0 flex justify-center items-center z-50"
         >
           <article className="content-container bg-white p-8 overflow-y-scroll max-h-screen">
-            <h4 className="mb-4">Welcome to CosmoSpeak</h4>
+            <h4 className="mb-4">Welcome to CosmoSpeak!</h4>
             <p className="mb-8">
               By using this model, you agree to the following terms and
               conditions:
             </p>
             <ol className="list-decimal mx-6 pl-2 mb-8">
-              <li>Continue with our 7 day trial!</li>  
+                <li>This chatbot was built to answer Space Engineering questions</li>
+              <li>Please do not ask NSFW questions</li>
+              <li>Do not ask about fictional spacecraft (Death Star)</li>
+              <li>Have Fun </li>  
+              
             
             </ol>
             <button
               className="p-3 px-6 bg-black text-red-700"
               onClick={() => window.location.href = 'https://square.link/u/RmVSmy9L'}
             >
-              Start Today
-            </button>
+              Subscribe
+                </button>
             <button
               className="p-3 px-6 bg-gray-500 text-white"
               onClick={handleClose}
